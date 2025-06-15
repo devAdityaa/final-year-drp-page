@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const Navigation: React.FC = () => {
+  const HOME = import.meta.env.VITE_HOME_URL;
   return (
     <header className="border-b bg-white">
       <div className="flex items-center justify-between px-4 py-3 max-w-7xl mx-auto">
@@ -11,9 +12,9 @@ const Navigation: React.FC = () => {
         CoVRx
         </Link>
         <nav className="flex items-center gap-4">
-        <Link to="http://localhost:8081/" className={`transition-all hover:-translate-y-0.5 text-blue-600 font-semibold`}>
+        <a href={HOME} className={`transition-all hover:-translate-y-0.5 text-blue-600 font-semibold`}>
             Home
-          </Link>
+          </a>
           <Link to="/drug-repurposing" className={`transition-all hover:-translate-y-0.5 text-blue-600 font-semibold`}>
             Drug Repurposing
           </Link>
